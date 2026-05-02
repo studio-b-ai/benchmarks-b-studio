@@ -6,13 +6,13 @@
   <title>Studio B Benchmarks — Ground truth for the lower middle market.</title>
 
   <!-- SEO -->
-  <meta name="description" content="The lower middle market has benchmarks. Getting them costs a seat at the institutional table. We're building the open alternative: SDLI, a direct lending index constructed from observed deal data.">
+  <meta name="description" content="The lower middle market has benchmarks. Getting them costs a seat at the institutional table. We're building the open alternative: SBDLI, a direct lending index constructed from observed deal data.">
 
   <!-- OG tags -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Studio B Benchmarks">
   <meta property="og:title" content="Ground truth for the lower middle market.">
-  <meta property="og:description" content="The lower middle market has benchmarks. Getting them costs a seat at the institutional table. We're building the open alternative: SDLI, a direct lending index constructed from observed deal data — not surveys, not self-reporting.">
+  <meta property="og:description" content="The lower middle market has benchmarks. Getting them costs a seat at the institutional table. We're building the open alternative: SBDLI, a direct lending index constructed from observed deal data — not surveys, not self-reporting.">
   <meta property="og:url" content="https://benchmarks.b.studio">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -114,11 +114,6 @@
       background: var(--paper);
     }
 
-    .cta-block--secondary {
-      background: var(--forest);
-      color: var(--paper);
-    }
-
     .cta-tier-label {
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.5rem;
@@ -127,10 +122,6 @@
       text-transform: uppercase;
       color: rgba(13, 13, 13, 0.4);
       margin-bottom: 1rem;
-    }
-
-    .cta-block--secondary .cta-tier-label {
-      color: rgba(244, 241, 235, 0.4);
     }
 
     .cta-block-title {
@@ -142,19 +133,11 @@
       margin-bottom: 0.75rem;
     }
 
-    .cta-block--secondary .cta-block-title {
-      color: var(--paper);
-    }
-
     .cta-block-body {
       font-size: 0.88rem;
       line-height: 1.55;
       color: rgba(13, 13, 13, 0.65);
       margin-bottom: 1.5rem;
-    }
-
-    .cta-block--secondary .cta-block-body {
-      color: rgba(244, 241, 235, 0.65);
     }
 
     .cta-form {
@@ -178,17 +161,6 @@
       color: rgba(13, 13, 13, 0.4);
     }
 
-    .cta-block--secondary .cta-input {
-      background: rgba(244, 241, 235, 0.08);
-      color: var(--paper);
-      border-color: rgba(244, 241, 235, 0.4);
-      border-right: none;
-    }
-
-    .cta-block--secondary .cta-input::placeholder {
-      color: rgba(244, 241, 235, 0.35);
-    }
-
     .cta-submit {
       padding: 0.65rem 1.25rem;
       border: 2px solid var(--ink);
@@ -205,17 +177,6 @@
     }
 
     .cta-submit:hover {
-      background: var(--paper);
-      color: var(--ink);
-    }
-
-    .cta-block--secondary .cta-submit {
-      border-color: rgba(244, 241, 235, 0.4);
-      background: rgba(244, 241, 235, 0.12);
-      color: var(--paper);
-    }
-
-    .cta-block--secondary .cta-submit:hover {
       background: var(--paper);
       color: var(--ink);
     }
@@ -286,29 +247,19 @@
 <section class="hero">
   <p class="firm-label">Studio B Benchmarks &middot; Measurement firm &middot; benchmarks.b.studio</p>
   <h1>Ground truth for the lower <em>middle market.</em></h1>
-  <p class="hero-body">The lower middle market has benchmarks. Getting them costs a seat at the institutional table. We're building the open alternative: SDLI, a direct lending index constructed from observed deal data — not surveys, not self-reporting. Ground truth, democratized.</p>
+  <p class="hero-body">The lower middle market has benchmarks. Getting them costs a seat at the institutional table. We're building the open alternative: SBDLI, a direct lending index constructed from observed deal data — not surveys, not self-reporting. Ground truth, democratized.</p>
 </section>
 
 <section class="cta-strip">
   <div class="cta-block cta-block--primary">
-    <p class="cta-tier-label">Free &middot; SDLI Brief</p>
+    <p class="cta-tier-label">SBDLI Brief &middot; Free</p>
     <h2 class="cta-block-title">Get early access</h2>
-    <p class="cta-block-body">The SDLI Brief — lower middle market benchmarks delivered to your inbox when the index updates.</p>
+    <p class="cta-block-body">The SBDLI Brief — lower middle market benchmarks delivered to your inbox when the index updates.</p>
     <form class="cta-form" id="free-form" onsubmit="submitFree(event)">
       <input class="cta-input" type="email" name="email" placeholder="your@email.com" required>
       <button class="cta-submit" type="submit">Subscribe</button>
     </form>
     <p class="form-success" id="free-success">&#10003; You're on the list.</p>
-  </div>
-  <div class="cta-block cta-block--secondary">
-    <p class="cta-tier-label">Institutional &middot; SDLI Premium</p>
-    <h2 class="cta-block-title">Join the waitlist</h2>
-    <p class="cta-block-body">Full dataset access, custom cuts, and direct lending comps. Pricing and availability at M9.</p>
-    <form class="cta-form" id="institutional-form" onsubmit="submitInstitutional(event)">
-      <input class="cta-input" type="email" name="email" placeholder="firm@email.com" required>
-      <button class="cta-submit" type="submit">Request access</button>
-    </form>
-    <p class="form-success" id="institutional-success">&#10003; We'll be in touch.</p>
   </div>
 </section>
 
@@ -326,7 +277,7 @@
     e.preventDefault();
     const email = e.target.email.value;
     // HubSpot form submit placeholder — wire to HubSpot form when ready
-    fetch('https://api.hsforms.com/submissions/v3/integration/submit/49070660/SDLI_BRIEF_FORM_ID', {
+    fetch('https://api.hsforms.com/submissions/v3/integration/submit/49070660/SBDLI_BRIEF_FORM_ID', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ fields: [{ name: 'email', value: email }] })
@@ -335,18 +286,6 @@
     e.target.reset();
   }
 
-  function submitInstitutional(e) {
-    e.preventDefault();
-    const email = e.target.email.value;
-    // HubSpot form submit placeholder — wire to HubSpot form when ready
-    fetch('https://api.hsforms.com/submissions/v3/integration/submit/49070660/INSTITUTIONAL_WAITLIST_FORM_ID', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ fields: [{ name: 'email', value: email }] })
-    }).catch(() => {}); // silent fail until form ID is wired
-    document.getElementById('institutional-success').style.display = 'block';
-    e.target.reset();
-  }
 </script>
 
 </body>
