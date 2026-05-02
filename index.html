@@ -140,15 +140,22 @@
       margin-bottom: 1.5rem;
     }
 
-    .beehiiv-embed {
-      width: 100%;
-      height: 56px;
-      border: none;
-      display: block;
+    .subscribe-btn {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.7rem 1.5rem;
+      border: 2px solid var(--ink);
+      color: var(--ink);
+      text-decoration: none;
+      transition: background 0.12s, color 0.12s;
     }
 
-    .cta-block--secondary .form-success {
-      color: var(--yolk);
+    .subscribe-btn:hover {
+      background: var(--ink);
+      color: var(--paper);
     }
 
     /* Footer */
@@ -211,13 +218,7 @@
     <p class="cta-tier-label">SBDLI Brief &middot; Free</p>
     <h2 class="cta-block-title">Get early access</h2>
     <p class="cta-block-body">The SBDLI Brief — lower middle market benchmarks delivered to your inbox when the index updates.</p>
-    <iframe
-      src="https://embeds.beehiiv.com/pub_e647b558-3a6e-4a29-87ff-c5fd2b566c35"
-      class="beehiiv-embed"
-      data-test-id="beehiiv-embed"
-      title="SBDLI Brief"
-      scrolling="no"
-    ></iframe>
+    <a href="https://brief.benchmarks.b.studio/subscribe" class="subscribe-btn" target="_blank">Subscribe free →</a>
   </div>
 </section>
 
